@@ -7,12 +7,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: FRONTEND_URL,
-    methods: ["GET"],
-  })
-);
+app.use(cors());
 
 app.use("/api/people", peopleRoutes);
 
